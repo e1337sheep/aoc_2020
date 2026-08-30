@@ -1,5 +1,0 @@
-# Rust build output for the game/ prototype.
-/game/rust/target/
-
-# Godot 4 local editor cache/import data (regenerated on open, not source).
-/game/godot/.godot/
