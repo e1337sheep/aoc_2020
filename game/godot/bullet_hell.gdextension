@@ -1,0 +1,22 @@
+[configuration]
+
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = "4.2"
+reloadable = true
+
+[libraries]
+
+; Paths are relative to this file's location (game/godot/), so one level up
+; (../) reaches game/, then into rust/target/{debug,release}/ where cargo
+; places build output for the godot-bridge cdylib.
+
+linux.debug.x86_64 = "res://../rust/target/debug/libgodot_bridge.so"
+linux.release.x86_64 = "res://../rust/target/release/libgodot_bridge.so"
+
+windows.debug.x86_64 = "res://../rust/target/debug/godot_bridge.dll"
+windows.release.x86_64 = "res://../rust/target/release/godot_bridge.dll"
+
+macos.debug = "res://../rust/target/debug/libgodot_bridge.dylib"
+macos.release = "res://../rust/target/release/libgodot_bridge.dylib"
+macos.debug.arm64 = "res://../rust/target/debug/libgodot_bridge.dylib"
+macos.release.arm64 = "res://../rust/target/release/libgodot_bridge.dylib"

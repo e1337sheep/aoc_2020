@@ -1,0 +1,11 @@
+[package]
+name = "sim-core"
+version = "0.1.0"
+edition = "2021"
+description = "Pure-Rust loadout balancing / simulation core for the bullet-hell shooter prototype. No Godot dependency."
+
+[dependencies]
+
+[lib]
+name = "sim_core"
+path = "src/lib.rs"

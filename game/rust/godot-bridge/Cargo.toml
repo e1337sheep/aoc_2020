@@ -1,0 +1,17 @@
+[package]
+name = "godot-bridge"
+version = "0.1.0"
+edition = "2021"
+description = "GDExtension entry point bridging Godot to sim-core."
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# api-4-6 pins codegen to the Godot 4.6 API surface, matching this project's
+# target editor/engine version (see game/godot/project.godot). Without an
+# explicit api-4-x feature, gdext defaults to the newest bundled API (4.7 in
+# this crate release), which would let us accidentally call APIs Godot 4.6
+# doesn't have.
+godot = { version = "0.5.5", features = ["api-4-6"] }
+sim-core = { path = "../sim-core" }
